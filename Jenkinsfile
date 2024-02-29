@@ -1,6 +1,5 @@
 pipeline {
     agent any
-    description 'Проект на С++ выводящий в консоль Hello World'
     stages {
         stage('Checkout') {
             steps {
