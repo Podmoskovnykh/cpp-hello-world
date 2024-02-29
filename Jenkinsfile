@@ -4,7 +4,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 // Шаг для получения исходного кода из репозитория
-                checkout scm
+                git 'https://github.com/Podmoskovnykh/cpp-hello-world.git'
             }
         }
 
@@ -12,8 +12,7 @@ pipeline {
             steps {
                 // Шаг для компиляции исходного кода
                 script {
-                    def compiler = 'g++'
-                    sh "${compiler} main.cpp -o main"
+                    sh 'g++ main.cpp -o main'
                 }
             }
         }
